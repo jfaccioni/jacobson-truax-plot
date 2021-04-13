@@ -1,6 +1,6 @@
 ## Jacobson-Truax-Plot
 
-[!img sample_data_masked.png]
+![Image](sample_imgs/sample_data_masked.png)
 
 A simple Python script for visualizing the outcome of **Jacobson-Truax's method** for calculating clinical significance scores ([1](https://en.wikipedia.org/wiki/Clinical_significance#Jacobson-Truax)).
 
