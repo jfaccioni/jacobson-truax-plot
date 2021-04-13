@@ -69,7 +69,15 @@ def main(
         sheet_name=sheet_name,
         index_col=0,
         header=[0, 1]
-    ).T
+    )
+
+    # Inverts the values of every column except the first two columns,
+    # so that all columns have the same meaning (positive values = good)
+    for column_name in data.columns[2:]:
+        data[column_name] = -data[column_name]
+
+    # Transposes the dataset (makes the plot a bit easier to understand)
+    data = data.T
 
     # Gets mask values (if user chose to do so)
     mask = data.abs() < 1.86 if mask_non_significant_values is True else None
